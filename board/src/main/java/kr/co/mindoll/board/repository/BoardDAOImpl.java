@@ -16,7 +16,7 @@ public class BoardDAOImpl implements BoardDAO{
 	
 	@Autowired
 	JdbcTemplate jdbcTemplate; //고정
-	
+	 
 	RowMapper<BoardVO> rowMapper = (rs, rowNum)-> {
 			BoardVO vo = new BoardVO();
 			vo.setBoardContent(rs.getString("boardContent"));
